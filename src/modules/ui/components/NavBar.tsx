@@ -8,12 +8,12 @@ export const NavBar = () => {
   const [open, setopen] = useState(false);
   return (
     <>
-      <nav className="navbar navbar-light bg-light justify-content-between ms-2 nav__container">
+      <nav className="navbar navbar-light bg-light justify-content-between ps-2 nav__container">
         <div className="nav__img">
           <img src={farinter} alt="img" width={150} className="p-1" />
         </div>
         <div>
-          <Typography variant="h5" component="h1">
+          <Typography variant="h5" component="h1" className="nav__title">
             Niveles de reimpresion
           </Typography>
         </div>

@@ -47,6 +47,11 @@ body{
     color:  red !important;
 }
 
+.base__text-primary{
+    color: $colorPrimary !important;
+    
+}
+
 .btn:hover .btn:active .btn:focus{
     box-shadow: none !important;
     border-color: transparent !important;
