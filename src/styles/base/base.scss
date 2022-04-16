@@ -1,0 +1,64 @@
+.form-control:focus{
+    box-shadow: none !important;
+}
+.nav-link.active{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.base__title{
+    font-size: 36px;
+    font-weight: 300;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fcfafa62;
+}
+
+.base__img{
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.base__img-gif{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+.base_btn-table{
+    width: 97px;
+    height: 26px;
+    font-size: 14px;
+    align-items: center;
+    padding: 0px;
+    border-radius: 12px;
+
+}
+.btn{
+    background-color: 1864BD !important;
+}
+
+.text-muted{
+    color:  red !important;
+}
+
+.btn:hover .btn:active .btn:focus{
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.base__button{
+    background-color: $colorPrimary !important;
+}
+
+.base__input{
+    border-color: $colorPrimary !important;
+}
+.base__pointer{
+    cursor: pointer;
+}
+
+.base__text-color{
+    color: $colorPrimary !important;
+}

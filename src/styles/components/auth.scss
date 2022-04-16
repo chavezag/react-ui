@@ -1,0 +1,33 @@
+.auth__container{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    //Centrar el formulario
+    margin-top: 20vh !important;
+}
+
+
+.auth__container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px 0 0 10px; 
+}
+
+.auth__container-info{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    
+    border-radius: 0 10px 10px 0;
+    background-color: $colorPrimary;
+}
