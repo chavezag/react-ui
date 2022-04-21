@@ -49,7 +49,11 @@ body{
 
 .base__text-primary{
     color: $colorPrimary !important;
-    
+
+}
+
+.base__divider{
+    color : white;
 }
 
 .btn:hover .btn:active .btn:focus{

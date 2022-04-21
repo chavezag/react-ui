@@ -16,7 +16,7 @@ export const routes: MRouter[] = [
     path: "/*",
     component: MainPage,
     exact: true,
-    name: "Main Page",
+    name: "Manage",
     children: [
       {
         path: "/home",
@@ -50,7 +50,7 @@ export const routes: MRouter[] = [
     path: "/auth/*",
     component: MainPage,
     exact: true,
-    name: "Auth Page",
+    name: "Auth",
     children: [
       {
         path: "login",

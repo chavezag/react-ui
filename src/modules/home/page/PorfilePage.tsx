@@ -1,17 +1,29 @@
-import { Avatar, Button, Container, Divider, Typography } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  Container,
+  Divider,
+  Typography,
+  Chip,
+  Alert,
+  AlertTitle,
+  IconButton,
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import EditIcon from "@mui/icons-material/Edit";
 import { ThemeProvider } from "@mui/system";
 import profile from "../../../assets/img/porfile.png";
-import { themeInput } from "../../../interface/theme";
+import { notify, themeInput } from "../../../interface/theme";
 import { EditUserModal } from "../../ui/modals/EditUserModal";
 import { useState } from "react";
 import { BackdropFarinter } from "../../ui/components/BackdropFarinter";
-
+import { toast } from "react-toastify";
 export const PorfilePage = () => {
   const [modal, setmodal] = useState({
     open: false,
     loading: false,
   });
+
   return (
     <>
       <BackdropFarinter
@@ -85,9 +97,12 @@ export const PorfilePage = () => {
                 Nivel del usuario:
               </Typography>
               <Divider />
-              <Typography variant="body1" component="h2">
-                Administrador
-              </Typography>
+              <Chip
+                className="mt-1"
+                label="Administrador"
+                color="primary"
+                variant="outlined"
+              />
             </div>
             <div className="col-md-4 mt-3">
               <Typography
@@ -110,12 +125,7 @@ export const PorfilePage = () => {
                 variant="contained"
                 color="primary"
                 endIcon={<EditIcon />}
-                onClick={() =>
-                  setmodal({
-                    ...modal,
-                    open: true,
-                  })
-                }
+                onClick={notify}
               >
                 Editar
               </Button>

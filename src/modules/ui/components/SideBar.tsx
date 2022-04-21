@@ -3,6 +3,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
 import { routes } from "../../../routers/MainRouter";
 import { Link, NavLink } from "react-router-dom";
+import { Divider, Typography } from "@mui/material";
 
 interface ItemList {
   id: number;
@@ -17,29 +18,39 @@ export const SideBar = () => {
         <div className="nav__sidebar-header">
           {routes.map((item) => (
             <>
-              {item.children
-                ? item.children.map((child) =>
-                    child.access && child.sidebar ? (
-                      <NavLink
-                        key={child.path}
-                        to={(item.path.split("*")[0] + child.path).replace(
-                          "//",
-                          "/"
-                        )}
-                        className={({ isActive }) =>
-                          isActive ? "nav__active" : "nav__sidebar-item"
-                        }
-                      >
-                        <div className="nav__sidebar-item-icon">
-                          {child.icon ? child.icon : <></>}
-                        </div>
-                        <div className="nav__sidebar-item-text">
-                          {child.name}
-                        </div>
-                      </NavLink>
-                    ) : null
-                  )
-                : null}
+              <div className="nav__sidebar-module">
+                <Typography
+                  variant="body1"
+                  component="p"
+                  className="nav__sidebar-module-title"
+                >
+                  {item.name}
+                </Typography>
+                <Divider className="base__divider" />
+                {item.children
+                  ? item.children.map((child) =>
+                      child.access && child.sidebar ? (
+                        <NavLink
+                          key={child.path}
+                          to={(item.path.split("*")[0] + child.path).replace(
+                            "//",
+                            "/"
+                          )}
+                          className={({ isActive }) =>
+                            isActive ? "nav__active" : "nav__sidebar-item"
+                          }
+                        >
+                          <div className="nav__sidebar-item-icon">
+                            {child.icon ? child.icon : <></>}
+                          </div>
+                          <div className="nav__sidebar-item-text">
+                            {child.name}
+                          </div>
+                        </NavLink>
+                      ) : null
+                    )
+                  : null}
+              </div>
             </>
           ))}
         </div>
