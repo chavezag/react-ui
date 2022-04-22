@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 import "./styles/index.scss";
 
+
 function App() {
   const [loading, setloading] = useState(true);
 

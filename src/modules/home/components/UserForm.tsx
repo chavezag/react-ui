@@ -143,7 +143,8 @@ export const UserForm = ({ intialValues, close, onSubmit }: IProps) => {
                 <Button color="error" onClick={handleClose}>
                   Cancelar
                 </Button>
-                <Button variant="contained" color="primary" type="submit">
+                <Button variant="contained" color="primary" type="submit"
+                >
                   Actualizar
                 </Button>
               </DialogActions>

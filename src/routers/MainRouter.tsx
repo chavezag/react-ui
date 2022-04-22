@@ -1,15 +1,16 @@
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { MRouter } from "../interface/router";
 import { MainPage } from "../modules/home/page/MainPage";
 import { PorfilePage } from "../modules/home/page/PorfilePage";
 import { LoginPage } from "../modules/auth/page/LoginPage";
 import { RegisterPage } from "../modules/auth/page/RegisterPage";
 
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import faHouse from "@fortawesome/free-solid-svg-icons/faHouse";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
-import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
+import { faHome, faIdBadge, faRightToBracket, faUser } from "@fortawesome/free-solid-svg-icons";
 
 export const routes: MRouter[] = [
   {
@@ -22,7 +23,7 @@ export const routes: MRouter[] = [
         path: "/home",
         component: MainPage,
         exact: true,
-        icon: <HomeOutlinedIcon />,
+        icon: faHome,
         name: "Main Page",
         access: true,
         sidebar: true,
@@ -32,7 +33,7 @@ export const routes: MRouter[] = [
         component: PorfilePage,
         exact: true,
         name: "Porfile Page",
-        icon: <AccountCircleOutlinedIcon />,
+        icon: faUser,
         access: true,
         sidebar: true,
       },
@@ -59,7 +60,7 @@ export const routes: MRouter[] = [
         access: true,
         exact: true,
         sidebar: true,
-        icon: <ExitToAppOutlinedIcon />,
+        icon: faRightToBracket,
       },
       {
         path: "register",
@@ -68,7 +69,7 @@ export const routes: MRouter[] = [
         access: true,
         exact: true,
         sidebar: true,
-        icon: <HowToRegOutlinedIcon />,
+        icon:   faIdBadge,
       },
       {
         path: "*",

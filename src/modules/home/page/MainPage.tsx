@@ -8,6 +8,10 @@ import {
 } from "@mui/x-data-grid";
 import { themeInput } from "../../../interface/theme";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faHomeAlt, faHomeLgAlt, faHomeUser, faHouse, faSadTear } from "@fortawesome/free-solid-svg-icons";
+import { Fastfood } from "@mui/icons-material";
+
 export const MainPage = (): JSX.Element => {
   const columns: GridColDef[] = [
     {
@@ -78,6 +82,15 @@ export const MainPage = (): JSX.Element => {
           Main Page
         </Typography>
 
+        <FontAwesomeIcon icon={
+          ["fab", "home"]
+        } />
+        asdas
+
+{/* Icono solido */}
+
+        
+
         <Container maxWidth="xl">
           <DataGrid
             style={{
@@ -99,8 +112,8 @@ export const MainPage = (): JSX.Element => {
 
 function CustomToolbar() {
   return (
-    <GridToolbarContainer>
-      <GridToolbarExport />
-    </GridToolbarContainer>
+    <>
+    
+    </>
   );
 }

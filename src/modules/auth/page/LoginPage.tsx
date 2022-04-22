@@ -6,6 +6,8 @@ import { TextField, Button } from "@mui/material";
 import * as Yup from "yup";
 import { themeInput } from "../../../interface/theme";
 import { useFormik } from "formik";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
 export const LoginPage = () => {
   const [loading, setloading] = useState(true);
@@ -59,7 +61,7 @@ export const LoginPage = () => {
                   <div className="col-md-12 mt-5">
                     <ThemeProvider theme={themeInput}>
                       <TextField
-                        label="Email"
+                        label="Correo"
                         variant="outlined"
                         fullWidth
                         name="email"
@@ -79,7 +81,7 @@ export const LoginPage = () => {
                   <div className="col-md-12 mt-3">
                     <ThemeProvider theme={themeInput}>
                       <TextField
-                        label="password"
+                        label="Contraseña"
                         name="password"
                         type={"password"}
                         variant="outlined"
@@ -107,6 +109,9 @@ export const LoginPage = () => {
                       style={{
                         width: "50%",
                       }}
+                      startIcon={
+                        <FontAwesomeIcon icon={faRightFromBracket} />
+                      }
                     >
                       Login
                     </Button>

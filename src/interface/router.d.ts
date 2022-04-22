@@ -1,3 +1,5 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 type JSXComponent = () => JSX.Element;
 export interface MRouter {
   name: string;
@@ -5,7 +7,7 @@ export interface MRouter {
   component: JSXComponent;
   exact: boolean;
   access?: boolean;
-  icon?: React.ReactElement;
+  icon?: IconProp;
   children?: MRouter[];
   sidebar?: boolean;
 }

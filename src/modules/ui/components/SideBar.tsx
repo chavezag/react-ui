@@ -4,6 +4,8 @@ import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined
 import { routes } from "../../../routers/MainRouter";
 import { Link, NavLink } from "react-router-dom";
 import { Divider, Typography } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 interface ItemList {
   id: number;
@@ -41,7 +43,11 @@ export const SideBar = () => {
                           }
                         >
                           <div className="nav__sidebar-item-icon">
-                            {child.icon ? child.icon : <></>}
+                            {child.icon ? (
+                              <FontAwesomeIcon size="xs" icon={child.icon} />
+                            ) : (
+                              <></>
+                            )}
                           </div>
                           <div className="nav__sidebar-item-text">
                             {child.name}

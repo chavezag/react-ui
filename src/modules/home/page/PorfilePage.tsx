@@ -5,11 +5,7 @@ import {
   Divider,
   Typography,
   Chip,
-  Alert,
-  AlertTitle,
-  IconButton,
 } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import EditIcon from "@mui/icons-material/Edit";
 import { ThemeProvider } from "@mui/system";
 import profile from "../../../assets/img/porfile.png";
@@ -23,6 +19,9 @@ export const PorfilePage = () => {
     open: false,
     loading: false,
   });
+
+  const handleDelete = () => {
+  }
 
   return (
     <>
@@ -117,6 +116,7 @@ export const PorfilePage = () => {
                 01/01/2020
               </Typography>
             </div>
+            
             <div
               className="col-md-12 mt-3 d-flex justify-content-end
             "
@@ -129,6 +129,29 @@ export const PorfilePage = () => {
               >
                 Editar
               </Button>
+            </div>
+            <div
+                className="col-md-12 mt-3"
+            >
+            <Typography
+                variant="body1"
+                component="h2"
+                className="base__text-primary"
+              >
+                Lista de accesos:
+              </Typography>
+              <Divider />
+              <div className="mt-2 justify-content-center">
+              <Chip className="m-1" label="Deletable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deleasdadastable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletaasdasdble" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletasdasdasdsaable" variant="outlined" color="primary" onDelete={handleDelete} />
+              <Chip className="m-1" label="Deletable" variant="outlined" color="primary" onDelete={handleDelete} /> 
+              </div>
             </div>
           </div>
         </Container>
